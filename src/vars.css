@@ -1,0 +1,22 @@
+:root {
+  /* Light Mode - Profissional e Limpo */
+  --color-text: #2d2d2d; /* Cinza quase preto para leitura */
+  --color-primary: #eb722d; /* Seu laranja (Energia/Ação) */
+  --color-secondary: #1a252f; /* Azul marinho escuro (Confiança/Seriedade) */
+  --color-dark: #121212; /* Preto absoluto para detalhes */
+  --color-bg: #ffffff; /* Fundo branco puro */
+  --color-accent: #f39c12; /* Um laranja mais claro para hover/detalhes */
+
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode - Moderno e Tecnológico */
+  --color-text: #f8f9fa; /* Texto claro */
+  --color-primary: #eb722d; /* Mantém o laranja da marca */
+  --color-secondary: #34495e; /* Azul acinzentado mais suave */
+  --color-dark: #000000;
+  --color-bg: #121212; /* Fundo escuro profundo */
+  --color-accent: #ff8c42; /* Laranja levemente mais brilhante para o escuro */
+}
