@@ -8,6 +8,9 @@ const HeroHeader = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const whatsappUrl = "https://wa.me/5511981200957?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20saber%20mais%20detalhes.%20Quero%20solicitar%20um%20orçamento!";
+    const instagramUrl = "https://www.instagram.com/arqtecservice_/";
+
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 80);
         window.addEventListener('scroll', handleScroll);
@@ -25,13 +28,17 @@ const HeroHeader = () => {
                             <a href="mailto:arqtecservice@gmail.com" className={styles.topLink}>
                                 <FaEnvelope /> arqtecservice@gmail.com
                             </a>
-                            <a href="https://wa.me/5511981200957" target="_blank" className={styles.topLink}>
+                            <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.topLink}>
                                 <FaPhoneAlt /> 11 98120-0957
                             </a>
                         </div>
                         <div className={styles.socialIcons}>
-                            <a href="https://instagram.com" target="_blank" className={styles.topLink}><FaInstagram size={18} /></a>
-                            <a href="https://wa.me/5511981200957" target="_blank" className={styles.topLink}><FaWhatsapp size={18} /></a>
+                            <a href={instagramUrl} target="_blank" rel="noreferrer" className={styles.topLink}>
+                                <FaInstagram size={18} />
+                            </a>
+                            <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.topLink}>
+                                <FaWhatsapp size={18} />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -68,8 +75,12 @@ const HeroHeader = () => {
                             Manutenção e instalação especializada para indústria gráfica e construção civil em toda a Grande São Paulo.
                         </p>
                         <div className={styles.ctaArea}>
-                            <a href="https://wa.me/5511981200957" className={styles.btnPrimary}>Solicitar Orçamento</a>
-                            <a href="#servicos" className={styles.btnSecondary}>Nossos Serviços</a>
+                            <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimary}>
+                                Solicitar Orçamento
+                            </a>
+                            <a href="#servicos" className={styles.btnSecondary}>
+                                Nossos Serviços
+                            </a>
                         </div>
                     </div>
                 </div>
