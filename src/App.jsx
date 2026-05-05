@@ -6,6 +6,7 @@ import Clients from './components/Clients/Clients';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import HeroHeader from './components/HeroHeader/HeroHeader';
+import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         {/* <Clients /> */}
         {/* <Contact /> */}
       </main>
+      <FloatingWhatsApp />
       <Footer />
     </div>
   );
