@@ -13,9 +13,9 @@ function App() {
       <HeroHeader />
       <main>
         <About />
-        <Services />
-        <Clients />
-        <Contact />
+        {/* <Services /> */}
+        {/* <Clients /> */}
+        {/* <Contact /> */}
       </main>
       <Footer />
     </div>
