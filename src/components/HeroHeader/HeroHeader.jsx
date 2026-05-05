@@ -46,11 +46,9 @@ const HeroHeader = () => {
                 <nav className={styles.mainNav}>
                     <div className={styles.container}>
                         <img src={logo} alt="Arqtecservice" className={styles.logo} />
-
                         <button className={styles.hamburger} onClick={toggleMenu} aria-label="Menu">
                             {isMenuOpen ? <FaTimes /> : <FaBars />}
                         </button>
-
                         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.navActive : ''}`}>
                             <li><a href="#home" onClick={toggleMenu}>Home</a></li>
                             <li><a href="#sobre" onClick={toggleMenu}>Sobre</a></li>
@@ -64,7 +62,6 @@ const HeroHeader = () => {
             <div className={styles.hero}>
                 <img src={banner} className={styles.bgImage} alt="Instalações Arqtecservice" />
                 <div className={styles.overlay}></div>
-
                 <div className={styles.container}>
                     <div className={styles.content}>
                         <h1 className={styles.title}>
