@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Casa Inteligente",
+    "description": "Transforme seu lar com integração de assistentes virtuais, iluminação e segurança gerenciados por voz ou aplicativos.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Administração de Condomínios",
+    "description": "Solução Condfy com convite facial via WhatsApp, QR Code e gestão unificada de dispositivos de segurança.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Armários Inteligentes",
+    "description": "Looters automatizados para recebimento de encomendas 24h, reduzindo a carga da portaria e aumentando a segurança.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Assistentes de Voz",
+    "description": "Integração perfeita com Alexa e Google Home para controle total de iluminação e temperatura por comando de voz.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Iluminação Automatizada",
+    "description": "Criação de cenários, economia de energia e controle remoto de intensidade e cor para ambientes modernos.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Acessibilidade",
+    "description": "Tecnologia inclusiva com comandos de voz para auxiliar a mobilidade de idosos e pessoas com deficiência.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Áudio e Som Ambiente",
+    "description": "Sistemas de áudio imersivos com alto-falantes embutidos e controle personalizado para residências e comércios.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Controle de Acessos",
+    "description": "Automação de cortinas, persianas, portas e portões com monitoramento remoto e eficiência energética.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Câmeras de Segurança",
+    "description": "Vigilância 24h com câmeras de alta definição para monitoramento constante de empresas e residências.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Wi-fi Alta Demanda",
+    "description": "Infraestrutura Ubiquiti para conexões rápidas e estáveis em ambientes com alto tráfego de dados.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Acesso Facial ControlID",
+    "description": "Autenticação biométrica de última geração, eliminando a necessidade de crachás ou senhas físicas.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Cabeamento Estruturado",
+    "description": "Organização padronizada de redes para suporte a sistemas de automação, dados e segurança.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Automação de Ar Condicionado",
+    "description": "Gestão inteligente de climatização para economia de energia e conforto térmico automatizado.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Persianas Automatizadas",
+    "description": "Controle de luminosidade e privacidade com integração a assistentes virtuais e agendamentos.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Controle de Acesso iDUHF",
+    "description": "Monitoramento veicular de longo alcance (até 15m) com proteção IP65 para condomínios e indústrias.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Catraca de Acesso Facial",
+    "description": "Controle de fluxo de pessoas com identificação facial automática e gestão em tempo real.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Módulo Intertravamento",
+    "description": "Segurança máxima para áreas restritas, permitindo a abertura de apenas uma porta por vez.",
+    "image": "services_01.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Fechadura Biométrica",
+    "description": "Tecnologia Intelbras FR 220 com travamento automático e múltiplos métodos de acesso seguro.",
+    "image": "services_01.jpg"
+  }
+]

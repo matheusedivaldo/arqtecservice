@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import About from './components/About/About';
-import Services from './components/Services/Services';
+import Solutions from './components/Solutions/Solutions';
 import Clients from './components/Clients/Clients';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
@@ -13,7 +13,7 @@ function App() {
       <HeroHeader />
       <main>
         <About />
-        {/* <Services /> */}
+        <Solutions />
         {/* <Clients /> */}
         {/* <Contact /> */}
       </main>

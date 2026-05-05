@@ -1,0 +1,38 @@
+import React from 'react';
+import styles from './Solutions.module.css';
+import servicesData from '../../data/services.json';
+import defaultImg from '../../assets/services/services_01.jpg';
+
+const Solutions = () => {
+    const whatsappUrl = "https://wa.me/5511981200957?text=Olá,%20vim%20através%20do%20site%20da%20Arqtecservice%20e%20gostaria%20de%20solicitar%20um%20orçamento.";
+
+    return (
+        <section className={styles.solutions} id="servicos">
+            <div className={styles.container}>
+                <header className={styles.header}>
+                    <span className={styles.label}>Soluções</span>
+                    <h2 className={styles.title}>Tecnologia e Performance para sua Infraestrutura</h2>
+                </header>
+
+                <div className={styles.grid}>
+                    {servicesData.map((service) => (
+                        <div key={service.id} className={styles.card}>
+                            <div className={styles.imageBox}>
+                                <img src={defaultImg} alt={service.title} className={styles.image} />
+                            </div>
+                            <div className={styles.info}>
+                                <h3 className={styles.cardTitle}>{service.title}</h3>
+                                <p className={styles.cardText}>{service.description}</p>
+                                <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnMore}>
+                                    Saber mais
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Solutions;
