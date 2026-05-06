@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Solutions.module.css';
 import servicesData from '../../data/services.json';
-import defaultImg from '../../assets/services/services_01.jpg';
 import { FaSearch } from 'react-icons/fa';
 
 const Solutions = () => {
@@ -9,6 +8,10 @@ const Solutions = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [showAll, setShowAll] = useState(false);
     const INITIAL_DISPLAY_COUNT = 9;
+
+    const getImageUrl = (name) => {
+        return new URL(`../../assets/services/${name}`, import.meta.url).href;
+    };
 
     const filteredServices = servicesData.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -41,7 +44,11 @@ const Solutions = () => {
                     {displayedServices.map((service) => (
                         <div key={service.id} className={styles.card}>
                             <div className={styles.imageBox}>
-                                <img src={defaultImg} alt={service.title} className={styles.image} />
+                                <img
+                                    src={getImageUrl(service.image)}
+                                    alt={service.title}
+                                    className={styles.image}
+                                />
                             </div>
                             <div className={styles.info}>
                                 <h3 className={styles.cardTitle}>{service.title}</h3>
