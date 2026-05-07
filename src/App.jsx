@@ -1,10 +1,11 @@
 import React from 'react';
 import './index.css';
+import HeroHeader from './components/HeroHeader/HeroHeader';
 import About from './components/About/About';
 import Solutions from './components/Solutions/Solutions';
-import Footer from './components/Footer/Footer';
-import HeroHeader from './components/HeroHeader/HeroHeader';
+import Partners from './components/Partners/Partners';
 import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main>
         <About />
         <Solutions />
+        <Partners />
       </main>
       <FloatingWhatsApp />
       <Footer />
