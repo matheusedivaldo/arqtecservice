@@ -1,0 +1,14 @@
+[
+  { "id": 1, "image": "01.jpeg", "title": "Painéis Elétricos" },
+  { "id": 2, "image": "02.jpeg", "title": "Automação Industrial" },
+  { "id": 3, "image": "03.jpeg", "title": "Iluminação Comercial" },
+  { "id": 4, "image": "04.jpeg", "title": "Controle de Motores" },
+  { "id": 5, "image": "05.jpeg", "title": "Quadros de Comando" },
+  { "id": 6, "image": "06.jpeg", "title": "Infraestrutura Elétrica" },
+  { "id": 7, "image": "07.jpeg", "title": "Monitoramento e Dados" },
+  { "id": 8, "image": "08.jpeg", "title": "Manutenção Preventiva" },
+  { "id": 9, "image": "09.jpeg", "title": "Instalação de Dispositivos" },
+  { "id": 10, "image": "10.jpeg", "title": "Climatização Split" },
+  { "id": 11, "image": "11.jpeg", "title": "Instalações de Ar" },
+  { "id": 12, "image": "12.jpeg", "title": "Acabamentos Técnicos" }
+]

@@ -1,0 +1,136 @@
+.gallery {
+  padding: 100px 0;
+  background-color: var(--color-bg);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 8%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.label {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-secondary);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+}
+
+.title span {
+  color: var(--color-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  background-color: var(--color-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 37, 47, 0.95), transparent 70%);
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.itemTitle {
+  color: #fff;
+  font-family: var(--font-secondary);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.accentLine {
+  width: 0;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin-top: 12px;
+  transition: width 0.4s ease;
+}
+
+.card:hover .accentLine {
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 70px 0;
+  }
+
+  .grid {
+    gap: 15px;
+  }
+
+  .itemTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 4 / 3;
+  }
+}
