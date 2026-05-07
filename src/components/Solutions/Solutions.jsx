@@ -10,7 +10,7 @@ const Solutions = () => {
 
     const generateWhatsAppUrl = (productTitle) => {
         const baseUrl = "https://wa.me/5511981200957";
-        const message = `Olá, VIM PELO SITE gostaria de solicitar um orçamento para ${productTitle}.`;
+        const message = `Olá, vim pelo site gostaria de solicitar um orçamento para ${productTitle}.`;
         return `${baseUrl}?text=${encodeURIComponent(message)}`;
     };
 
