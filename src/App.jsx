@@ -5,6 +5,7 @@ import About from './components/About/About';
 import Solutions from './components/Solutions/Solutions';
 import Partners from './components/Partners/Partners';
 import Gallery from './components/Gallery/Gallery';
+import Contact from './components/Contact/Contact';
 import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
 import Footer from './components/Footer/Footer';
 
@@ -17,6 +18,7 @@ function App() {
         <Solutions />
         <Partners />
         <Gallery />
+        <Contact />
       </main>
       <FloatingWhatsApp />
       <Footer />

@@ -1,0 +1,229 @@
+.contact {
+  padding: 120px 0;
+  background-color: #fcfcfc;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.header {
+  margin-bottom: 45px;
+}
+
+.label {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-secondary);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.title span {
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  opacity: 0.8;
+  max-width: 600px;
+}
+
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.infoCard {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.infoIcon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+}
+
+.infoCard h4 {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.infoCard p {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.mapContainer {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.mapBadge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--color-secondary);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 999;
+}
+
+.formSide {
+  position: sticky;
+  top: 40px;
+}
+
+.formCard {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid var(--color-primary);
+}
+
+.formTitle {
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inputBox input,
+.inputBox select,
+.inputBox textarea {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #eee;
+  background: #fdfdfd;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inputBox input:focus,
+.inputBox select:focus,
+.inputBox textarea:focus {
+  border-color: var(--color-primary);
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(235, 114, 45, 0.05);
+}
+
+.btnSubmit {
+  background-color: var(--color-secondary);
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: 10px;
+}
+
+.btnSubmit:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(235, 114, 45, 0.2);
+}
+
+@media (max-width: 1100px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .formSide {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 0;
+  }
+  .formCard {
+    padding: 30px;
+  }
+  .infoCards {
+    grid-template-columns: 1fr;
+  }
+  .mapContainer {
+    height: 300px;
+  }
+}
+
+:global(.map-pulse) {
+  animation: leaflet-pulse 3s infinite ease-in-out;
+}
+
+@keyframes leaflet-pulse {
+  0% {
+    fill-opacity: 0.1;
+    stroke-opacity: 0.4;
+  }
+  50% {
+    fill-opacity: 0.3;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0.1;
+    stroke-opacity: 0.4;
+  }
+}
