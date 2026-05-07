@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './HeroHeader.module.css';
 import logo from '../../assets/logos/logo-arqtecservice-monob.svg';
-import banner from '../../assets/banners/banner03.jpg';
+import banner from '../../assets/banners/banner01.jpg';
 import { FaInstagram, FaWhatsapp, FaEnvelope, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
 
 const HeroHeader = () => {
