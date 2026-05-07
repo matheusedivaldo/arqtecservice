@@ -2,103 +2,103 @@
   {
     "id": 1,
     "title": "Casa Inteligente",
-    "description": "Integração completa de automação residencial com controle centralizado de iluminação, climatização, segurança e dispositivos inteligentes.",
+    "description": "Integração completa de iluminação, climatização, segurança e áudio centralizado.",
     "image": "services_01.jpg"
   },
   {
     "id": 2,
     "title": "Fechadura Biométrica",
-    "description": "Tecnologia Intelbras FR 220 com travamento automático e múltiplos métodos de acesso seguro.",
+    "description": "Tecnologia de travamento automático com múltiplos métodos de acesso seguro.",
     "image": "services_02.jpeg"
   },
   {
     "id": 3,
     "title": "Assistentes de Voz",
-    "description": "Integração com Alexa e Google Home para automação por voz e execução de rotinas inteligentes.",
+    "description": "Integração com Alexa e Google Home para automação por voz e rotinas.",
     "image": "services_03.jpeg"
   },
   {
     "id": 4,
     "title": "Armários Inteligentes",
-    "description": "Lockers automatizados para recebimento de encomendas 24h, reduzindo a carga da portaria e aumentando a segurança.",
+    "description": "Lockers automatizados para recebimento de encomendas 24h com total segurança.",
     "image": "services_04.jpg"
   },
   {
     "id": 5,
     "title": "Iluminação Automatizada",
-    "description": "Criação de cenários personalizados, economia de energia e controle remoto de intensidade e cor para ambientes modernos.",
+    "description": "Cenários personalizados, economia de energia e controle remoto de ambientes.",
     "image": "services_05.jpeg"
   },
   {
     "id": 6,
     "title": "Acessibilidade",
-    "description": "Tecnologia inclusiva com comandos de voz e automação para auxiliar a mobilidade de idosos e pessoas com deficiência.",
+    "description": "Comandos de voz e automação para auxiliar a mobilidade de idosos e PcD.",
     "image": "services_06.jpeg"
   },
   {
     "id": 7,
     "title": "Áudio e Som Ambiente",
-    "description": "Sistemas de áudio imersivos com alto-falantes embutidos e controle personalizado para residências e comércios.",
+    "description": "Sistemas imersivos com alto-falantes embutidos e controle personalizado.",
     "image": "services_07.jpeg"
   },
   {
     "id": 8,
     "title": "Controle de Acessos",
-    "description": "Sistemas completos de controle de acesso com gestão centralizada, incluindo biometria, cartões, tags veiculares e monitoramento em tempo real.",
+    "description": "Gestão centralizada com biometria, cartões, tags veiculares e monitoramento.",
     "image": "services_08.jpeg"
   },
   {
     "id": 9,
     "title": "Câmeras de Segurança",
-    "description": "Vigilância 24h com câmeras de alta definição para monitoramento constante de empresas e residências.",
+    "description": "Vigilância 24h de alta definição para monitoramento constante.",
     "image": "services_09.png"
   },
   {
     "id": 10,
     "title": "Wi-fi Alta Demanda",
-    "description": "Redes corporativas de alta performance com equipamentos Ubiquiti, garantindo cobertura total, estabilidade e desempenho em ambientes de alta densidade.",
+    "description": "Redes corporativas Ubiquiti para total estabilidade e desempenho.",
     "image": "services_10.png"
   },
   {
     "id": 11,
     "title": "Acesso Facial ControlID",
-    "description": "Controle de acesso por reconhecimento facial com alta precisão, eliminando credenciais físicas e aumentando a segurança operacional.",
+    "description": "Reconhecimento facial de alta precisão que elimina credenciais físicas.",
     "image": "services_11.jpeg"
   },
   {
     "id": 12,
     "title": "Cabeamento Estruturado",
-    "description": "Organização padronizada de redes para suporte a sistemas de automação, dados e segurança.",
+    "description": "Organização padronizada de redes para automação, dados e segurança.",
     "image": "services_12.jpeg"
   },
   {
     "id": 13,
-    "title": "Automação de Ar Condicionado",
-    "description": "Gestão inteligente de climatização para economia de energia e conforto térmico automatizado.",
+    "title": "Automação de Ar",
+    "description": "Gestão inteligente de climatização para economia de energia e conforto.",
     "image": "services_13.png"
   },
   {
     "id": 14,
     "title": "Persianas Automatizadas",
-    "description": "Controle de luminosidade e privacidade com integração a assistentes virtuais e agendamentos automatizados.",
+    "description": "Controle de luminosidade com integração a assistentes e agendamentos.",
     "image": "services_14.png"
   },
   {
     "id": 15,
-    "title": "Controle de Acesso iDUHF",
-    "description": "Monitoramento veicular de longo alcance (até 15m) com proteção IP65 para condomínios e indústrias.",
+    "title": "Controle iDUHF",
+    "description": "Monitoramento veicular de longo alcance (até 15m) com proteção IP65.",
     "image": "services_15.png"
   },
   {
     "id": 16,
-    "title": "Catraca de Acesso Facial",
-    "description": "Controle de fluxo com catracas automatizadas integradas a reconhecimento facial, ideal para ambientes corporativos e de alto tráfego.",
+    "title": "Catraca Facial",
+    "description": "Controle de fluxo automatizado ideal para ambientes corporativos.",
     "image": "services_16.png"
   },
   {
     "id": 17,
-    "title": "Módulo Intertravamento",
-    "description": "Sistema de segurança para áreas restritas que permite a abertura de apenas uma porta por vez, evitando acessos simultâneos.",
+    "title": "Intertravamento",
+    "description": "Sistema de segurança para áreas restritas com abertura de porta única.",
     "image": "services_17.png"
   }
 ]

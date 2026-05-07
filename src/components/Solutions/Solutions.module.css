@@ -1,132 +1,197 @@
 .solutions {
-  padding: 120px 0;
-  background-color: var(--color-bg);
+  padding: 140px 0;
+  background-color: #ffffff;
+  position: relative;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  width: 100%;
   padding: 0 8%;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.lineBadge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.lineBadge::after {
+  content: "";
+  height: 2px;
+  width: 60px;
+  background-color: var(--color-primary);
 }
 
 .label {
   color: var(--color-primary);
+  font-family: var(--font-secondary);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 0.9rem;
-  display: block;
-  margin-bottom: 15px;
+  font-size: 0.85rem;
 }
 
 .title {
   font-family: var(--font-secondary);
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2.2rem, 5vw, 4rem);
   color: var(--color-secondary);
   text-transform: uppercase;
-  max-width: 800px;
-  margin: 0 auto;
+  line-height: 1.1;
 }
 
-.searchBar {
+.title span {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-secondary);
+}
+
+/* BARRA DE PESQUISA ESTILIZADA */
+.searchContainer {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.searchWrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  background: #fff;
-  border: 2px solid var(--color-secondary);
-  padding: 18px 28px;
-  border-radius: 4px;
+  background: #fdfdfd;
+  width: 100%;
   max-width: 700px;
-  margin: 0 auto 80px;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  padding: 22px 30px;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eee;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.searchBar:focus-within {
-  border-color: var(--color-primary);
-  box-shadow: 0 10px 25px rgba(235, 114, 45, 0.15);
+.searchAccent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: var(--color-secondary);
+  transition: all 0.4s ease;
 }
 
 .searchIcon {
   color: var(--color-secondary);
-  font-size: 1.4rem;
-  margin-right: 18px;
-  opacity: 0.8;
+  font-size: 1.1rem;
+  margin-right: 20px;
+  z-index: 2;
+  transition: all 0.4s ease;
 }
 
-.searchBar input {
+.searchWrapper input {
   border: none;
   background: transparent;
   width: 100%;
   font-family: var(--font-primary);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--color-secondary);
   outline: none;
+  z-index: 2;
 }
 
-.searchBar input::placeholder {
-  color: rgba(26, 37, 47, 0.4);
+.searchWrapper input::placeholder {
+  color: #bbb;
+  font-weight: 400;
 }
 
+.searchFocusBorder {
+  position: absolute;
+  inset: -1px;
+  border: 2px solid var(--color-primary);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.searchWrapper:focus-within {
+  transform: translateY(-5px);
+  background: #fff;
+  box-shadow: 20px 20px 60px rgba(235, 114, 45, 0.1);
+}
+
+.searchWrapper:focus-within .searchFocusBorder {
+  opacity: 1;
+}
+
+.searchWrapper:focus-within .searchAccent {
+  background-color: var(--color-primary);
+  width: 8px;
+}
+
+.searchWrapper:focus-within .searchIcon {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* GRID E CARDS */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 50px 30px;
 }
 
 .card {
+  position: relative;
   background: #fff;
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 4px solid transparent;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-}
-
-.card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
-  border-bottom-color: var(--color-primary);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .imageBox {
+  position: relative;
   width: 100%;
-  height: 280px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background-color: var(--color-dark);
+  background-color: var(--color-secondary);
+}
+
+.indexNumber {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: var(--font-secondary);
+  color: #fff;
+  z-index: 5;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  background: var(--color-primary);
+  padding: 5px 10px;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.9;
-  transition: transform 0.5s ease;
+  transition: transform 0.8s ease;
 }
 
-.card:hover .image {
-  transform: scale(1.1);
-  opacity: 1;
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-secondary), transparent);
+  opacity: 0.4;
+  z-index: 2;
 }
 
 .info {
-  padding: 40px 30px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  padding: 35px 0;
 }
 
 .cardTitle {
   font-family: var(--font-secondary);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--color-secondary);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -134,73 +199,90 @@
 }
 
 .cardText {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--color-text);
-  line-height: 1.7;
-  margin-bottom: 30px;
-  opacity: 0.85;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  opacity: 0.7;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.btnMore {
-  margin-top: auto;
+.btnAction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
   color: var(--color-secondary);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   letter-spacing: 2px;
-  border-bottom: 2px solid var(--color-primary);
-  width: fit-content;
-  padding-bottom: 5px;
   transition: all 0.3s ease;
 }
 
-.btnMore:hover {
+.btnAction svg {
+  transition: transform 0.3s ease;
   color: var(--color-primary);
-  padding-left: 10px;
 }
 
-.noResults {
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.card:hover .btnAction {
+  color: var(--color-primary);
+}
+
+.card:hover .btnAction svg {
+  transform: translateX(8px);
+}
+
+.emptyState {
   text-align: center;
-  padding: 80px 0;
-  color: var(--color-secondary);
-  font-family: var(--font-primary);
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.6;
-  background: #fdfdfd;
-  border: 1px dashed var(--color-secondary);
-  border-radius: 4px;
+  padding: 100px 0;
+  border-top: 1px solid #eee;
 }
 
-.loadMoreContainer {
+.resetBtn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.footerAction {
+  margin-top: 100px;
   text-align: center;
-  margin-top: 80px;
 }
 
-.btnPrimary {
+.loadBtn {
   background-color: var(--color-secondary);
   color: #fff;
   border: none;
-  padding: 20px 55px;
+  padding: 22px 50px;
   font-family: var(--font-secondary);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.95rem;
-  letter-spacing: 2px;
-  transition: all 0.4s ease;
-  border-radius: 2px;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
-.btnPrimary:hover {
+.loadBtn:hover {
   background-color: var(--color-primary);
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(235, 114, 45, 0.25);
+  box-shadow: 0 15px 30px rgba(235, 114, 45, 0.2);
 }
 
 @media (max-width: 1100px) {
@@ -211,36 +293,24 @@
 
 @media (max-width: 768px) {
   .solutions {
-    padding: 80px 0;
+    padding: 100px 0;
   }
-
-  .searchBar {
-    margin-bottom: 50px;
-    padding: 15px 20px;
+  .header {
+    text-align: center;
   }
-
+  .lineBadge {
+    justify-content: center;
+  }
+  .searchWrapper {
+    margin: 0 auto;
+  }
   .grid {
     grid-template-columns: 1fr;
-    gap: 30px;
   }
-
-  .container {
-    padding: 0 7%;
-  }
-
-  .imageBox {
-    height: 220px;
-  }
-
   .info {
-    padding: 30px 20px;
+    text-align: center;
   }
-
-  .title {
-    font-size: 1.8rem;
-  }
-
-  .btnPrimary {
-    width: 100%;
+  .btnAction {
+    justify-content: center;
   }
 }
