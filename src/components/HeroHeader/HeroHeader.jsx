@@ -55,6 +55,9 @@ const HeroHeader = () => {
                             <li><a href="#sobre" onClick={closeMenu}>Sobre</a></li>
                             <li><a href="#servicos" onClick={closeMenu}>Serviços</a></li>
                             <li><a href="#contato" onClick={closeMenu}>Contato</a></li>
+                            <li className={styles.mobileOnly}>
+                                <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>Solicitar Orçamento</a>
+                            </li>
                         </ul>
 
                         <button className={styles.hamburger} onClick={toggleMenu}>
@@ -85,7 +88,7 @@ const HeroHeader = () => {
                     </p>
 
                     <div className={styles.ctaArea}>
-                        <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimary}>Solicitar Orçamento</a>
+                        <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>Solicitar Orçamento</a>
                         <a href="#servicos" className={styles.btnSecondary}>Nossos Serviços</a>
                     </div>
                 </div>
