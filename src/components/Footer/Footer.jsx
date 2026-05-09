@@ -51,8 +51,8 @@ const Footer = () => {
                         <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.contactItem}>
                             <FaWhatsapp /> <span>11 98120-0957</span>
                         </a>
-                        <a href="mailto:arqtecservice@gmail.com" className={styles.contactItem}>
-                            <FaEnvelope /> <span>arqtecservice@gmail.com</span>
+                        <a href="mailto:contato.arqtecservice@gmail.com" className={styles.contactItem}>
+                            <FaEnvelope /> <span>contato.arqtecservice@gmail.com</span>
                         </a>
                         <div className={styles.contactItem}>
                             <FaMapMarkerAlt /> <span>Osasco - São Paulo</span>

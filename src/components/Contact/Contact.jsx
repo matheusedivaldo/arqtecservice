@@ -80,7 +80,7 @@ const Contact = () => {
                                 <div className={styles.iconCircle}><FaEnvelope /></div>
                                 <div className={styles.cardText}>
                                     <h4>E-mail</h4>
-                                    <p>arqtecservice@gmail.com</p>
+                                    <p>contato.arqtecservice@gmail.com</p>
                                 </div>
                             </div>
                             <div className={styles.infoCard}>

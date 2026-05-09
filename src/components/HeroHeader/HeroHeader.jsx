@@ -33,8 +33,8 @@ const HeroHeader = () => {
                 <div className={styles.topBar}>
                     <div className={styles.container}>
                         <div className={styles.contactInfo}>
-                            <a href="mailto:arqtecservice@gmail.com" className={styles.topLink}>
-                                <FaEnvelope /> arqtecservice@gmail.com
+                            <a href="mailto:contato.arqtecservice@gmail.com" className={styles.topLink}>
+                                <FaEnvelope /> contato.arqtecservice@gmail.com
                             </a>
                             <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.topLink}>
                                 <FaPhoneAlt /> 11 98120-0957
