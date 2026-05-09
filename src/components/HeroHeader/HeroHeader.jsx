@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './HeroHeader.module.css';
 import logo from '../../assets/logos/logo-arqtecservice-monob.svg';
-import banner from '../../assets/banners/banner01.jpg';
+import bannerDesktop from '../../assets/banners/banner-desktop.jpg';
+import bannerMobile from '../../assets/banners/banner-mobile.jpg';
 import { FaInstagram, FaWhatsapp, FaEnvelope, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
 
 const HeroHeader = () => {
@@ -69,7 +70,8 @@ const HeroHeader = () => {
 
             <div className={styles.hero}>
                 <div className={styles.imageLayer}>
-                    <img src={banner} className={styles.bgImage} alt="Instalações" />
+                    <img src={bannerDesktop} className={`${styles.bgImage} ${styles.desktopBanner}`} alt="Instalações" />
+                    <img src={bannerMobile} className={`${styles.bgImage} ${styles.mobileBanner}`} alt="Instalações" />
                     <div className={styles.overlay}></div>
                 </div>
 
