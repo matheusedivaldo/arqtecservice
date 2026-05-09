@@ -47,27 +47,20 @@ const Footer = () => {
 
                     <div className={styles.contactColumn}>
                         <h3>Atendimento</h3>
-                        <div className={styles.contactItem}>
-                            <FaWhatsapp />
-                            <span>11 98120-0957</span>
-                        </div>
-                        <div className={styles.contactItem}>
-                            <FaEnvelope />
-                            <span>arqtecservice@gmail.com</span>
-                        </div>
-                        <div className={styles.contactItem}>
-                            <FaMapMarkerAlt />
-                            <span>Osasco - São Paulo</span>
-                        </div>
+                        <div className={styles.contactItem}><FaWhatsapp /> <span>11 98120-0957</span></div>
+                        <div className={styles.contactItem}><FaEnvelope /> <span>arqtecservice@gmail.com</span></div>
+                        <div className={styles.contactItem}><FaMapMarkerAlt /> <span>Osasco - São Paulo</span></div>
                     </div>
                 </div>
 
                 <div className={styles.bottom}>
-                    <div className={styles.copyright}>
-                        © {currentYear} <strong>Arqtecservice</strong>. Todos os direitos reservados.
-                    </div>
-                    <div className={styles.developer}>
-                        Desenvolvido por <a href="https://matheusedivaldo.com.br/" target="_blank" rel="noreferrer">Matheus Edivaldo</a>
+                    <div className={styles.bottomContent}>
+                        <div className={styles.copyright}>
+                            © {currentYear} <strong>Arqtecservice</strong>. Todos os direitos reservados.
+                        </div>
+                        <div className={styles.developer}>
+                            Desenvolvido por <a href="https://matheusedivaldo.com.br/" target="_blank" rel="noreferrer">Matheus Edivaldo</a>
+                        </div>
                     </div>
                 </div>
             </div>

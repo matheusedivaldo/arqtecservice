@@ -1,174 +1,174 @@
 .footer {
   background-color: #0a0a0a;
   color: #ffffff;
-  padding: 100px 0 40px;
+  padding: 80px 0 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 8%;
+  padding: 0 5%;
 }
 
 .top {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-  gap: 60px;
-  margin-bottom: 80px;
+  gap: 40px;
+  margin-bottom: 60px;
 }
 
 .logo {
-  height: 50px;
-  margin-bottom: 25px;
+  height: 45px;
+  margin-bottom: 20px;
 }
 
 .brandDesc {
   color: #999;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  max-width: 320px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 300px;
 }
 
 .socialBtn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
   color: #fff;
-  padding: 12px 20px;
+  padding: 10px 18px;
   border-radius: 4px;
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 700;
-  transition: 0.3s;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialBtn:hover {
   background-color: var(--color-primary);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .linkColumn h3,
 .contactColumn h3 {
-  font-family: var(--font-secondary);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   color: var(--color-primary);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .linkColumn ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .linkColumn a,
 .linkColumn span {
-  color: #ccc;
+  color: #bbb;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
-  gap: 10px;
-  transition: 0.3s;
+  gap: 8px;
+  transition: 0.2s;
 }
 
 .linkColumn a svg,
 .linkColumn span svg {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--color-primary);
 }
 
 .linkColumn a:hover {
   color: #fff;
-  padding-left: 5px;
+  padding-left: 4px;
 }
 
 .contactColumn {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  gap: 15px;
-  color: #ccc;
-  font-size: 0.9rem;
+  gap: 12px;
+  color: #bbb;
+  font-size: 0.85rem;
 }
 
 .contactItem svg {
   color: var(--color-primary);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 40px;
+  padding-top: 30px;
+  margin-top: 20px;
+}
+
+.bottomContent {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  font-size: 0.85rem;
-  color: #666;
+  gap: 12px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #555;
 }
 
 .copyright strong {
-  color: #fff;
+  color: #999;
+}
+
+.developer {
+  font-size: 0.8rem;
+  color: #555;
+  position: relative;
+  z-index: 100;
 }
 
 .developer a {
-  color: #fff;
+  color: #888;
   text-decoration: none;
-  font-weight: 700;
-  border-bottom: 1px solid var(--color-primary);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(235, 114, 45, 0.3);
   transition: 0.3s;
 }
 
 .developer a:hover {
   color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .top {
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .footer {
-    padding: 80px 0 30px;
-  }
-
   .top {
     grid-template-columns: 1fr;
-    gap: 40px;
     text-align: center;
   }
-
   .brandDesc {
-    margin: 0 auto 30px;
+    margin: 0 auto 20px;
   }
-
-  .socialLinks {
-    justify-content: center;
-  }
-
+  .socialLinks,
   .linkColumn a,
   .linkColumn span,
   .contactItem {
     justify-content: center;
-  }
-
-  .bottom {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
   }
 }
