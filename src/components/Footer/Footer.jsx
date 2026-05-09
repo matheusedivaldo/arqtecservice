@@ -5,6 +5,7 @@ import { FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaChevronRight } f
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const whatsappUrl = "https://wa.me/5511981200957?text=Olá, vim através do site e gostaria de um orçamento.";
 
     return (
         <footer className={styles.footer}>
@@ -47,9 +48,15 @@ const Footer = () => {
 
                     <div className={styles.contactColumn}>
                         <h3>Atendimento</h3>
-                        <div className={styles.contactItem}><FaWhatsapp /> <span>11 98120-0957</span></div>
-                        <div className={styles.contactItem}><FaEnvelope /> <span>arqtecservice@gmail.com</span></div>
-                        <div className={styles.contactItem}><FaMapMarkerAlt /> <span>Osasco - São Paulo</span></div>
+                        <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.contactItem}>
+                            <FaWhatsapp /> <span>11 98120-0957</span>
+                        </a>
+                        <a href="mailto:arqtecservice@gmail.com" className={styles.contactItem}>
+                            <FaEnvelope /> <span>arqtecservice@gmail.com</span>
+                        </a>
+                        <div className={styles.contactItem}>
+                            <FaMapMarkerAlt /> <span>Osasco - São Paulo</span>
+                        </div>
                     </div>
                 </div>
 
