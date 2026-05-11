@@ -1,23 +1,23 @@
 .contact {
-  padding: clamp(60px, 10vw, 140px) 0;
-  background-color: #fafafa;
+  padding: clamp(60px, 8vw, 120px) 0;
+  background: #fafafa;
   overflow: hidden;
 }
 
 .container {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 24px;
 }
 
 .contentGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px;
-  align-items: flex-start;
+  align-items: center;
 }
 
-/* INFO SIDE */
 .infoSide {
   opacity: 0;
   transform: translateX(-40px);
@@ -33,20 +33,21 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #e8f5e9;
+  background: #e8f5e9;
   color: #2e7d32;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 0.7rem;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 
 .dot {
   width: 8px;
   height: 8px;
-  background-color: #4caf50;
+  background: #4caf50;
   border-radius: 50%;
   animation: pulse 1.5s infinite;
 }
@@ -56,10 +57,12 @@
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.4);
     opacity: 0.6;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -68,11 +71,12 @@
 
 .title {
   font-family: var(--font-secondary);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  color: var(--color-secondary);
-  text-transform: uppercase;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--color-secondary);
   margin-bottom: 20px;
+  word-break: break-word;
 }
 
 .title span {
@@ -80,31 +84,34 @@
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.7;
   color: var(--color-text);
+  opacity: 0.85;
   margin-bottom: 40px;
-  line-height: 1.6;
-  opacity: 0.8;
+  max-width: 550px;
 }
 
 .infoCards {
   display: grid;
-  gap: 25px;
+  gap: 20px;
 }
 
 .infoCard {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
+  padding: 18px;
   background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  width: 100%;
 }
 
 .iconCircle {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
   background: rgba(235, 114, 45, 0.1);
   color: var(--color-primary);
   display: flex;
@@ -112,31 +119,39 @@
   justify-content: center;
   border-radius: 50%;
   font-size: 1.2rem;
-  flex-shrink: 0;
+}
+
+.cardText {
+  width: 100%;
+  overflow: hidden;
 }
 
 .cardText h4 {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   color: #888;
   letter-spacing: 1px;
+  margin-bottom: 4px;
 }
 
 .cardText p {
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* FORM SIDE */
 .formSide {
-  background-color: #ffffff;
-  padding: clamp(30px, 5vw, 60px);
-  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
+  background: #fff;
+  padding: clamp(24px, 5vw, 60px);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+  width: 100%;
 }
 
 .animate .formSide {
@@ -157,105 +172,174 @@
 }
 
 .inputGroup label {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   font-weight: 800;
-  color: var(--color-secondary);
   letter-spacing: 1px;
+  color: var(--color-secondary);
 }
 
 .inputGroup input,
 .inputGroup select,
 .inputGroup textarea {
-  padding: 15px;
-  border: 1px solid #eee;
-  background-color: #fcfcfc;
-  font-family: var(--font-primary);
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e5e5e5;
+  background: #fcfcfc;
+  border-radius: 8px;
   font-size: 1rem;
+  font-family: var(--font-primary);
   outline: none;
+  transition: 0.3s ease;
 }
 
 .inputGroup textarea {
-  height: 100px;
-  resize: none;
+  min-height: 120px;
+  resize: vertical;
 }
 
 .inputGroup input:focus,
+.inputGroup select:focus,
 .inputGroup textarea:focus {
   border-color: var(--color-primary);
-  background-color: #fff;
+  background: #fff;
 }
 
 .submitBtn {
-  background-color: var(--color-primary);
-  color: #fff;
+  width: 100%;
   border: none;
   padding: 18px;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #fff;
   font-family: var(--font-secondary);
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .submitBtn:hover {
-  background-color: var(--color-secondary);
-  transform: translateY(-3px);
+  background: var(--color-secondary);
+  transform: translateY(-2px);
 }
 
 .securityText {
-  text-align: center;
-  font-size: 0.7rem;
-  color: #bbb;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
 }
 
-/* RESPONSIVO AJUSTADO */
 @media (max-width: 1024px) {
   .contentGrid {
     grid-template-columns: 1fr;
     gap: 50px;
   }
+
   .infoSide {
     text-align: center;
   }
-  .statusBadge,
-  .infoCard {
-    justify-content: center;
-  }
+
   .subtitle {
-    margin: 0 auto 30px;
+    margin: 0 auto 32px;
   }
+
   .infoCards {
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
   }
-}
 
-@media (max-width: 600px) {
-  .container {
-    padding: 0 4%;
-  }
-  .formSide {
-    padding: 30px 20px;
-  }
-  .title {
-    font-size: 1.8rem;
-  }
   .infoCard {
     text-align: left;
   }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .contentGrid {
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .formSide {
+    padding: 28px 20px;
+  }
+
+  .infoCard {
+    padding: 16px;
+    gap: 14px;
+  }
+
   .iconCircle {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
     font-size: 1rem;
+  }
+
+  .cardText p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .title {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .statusBadge {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .infoCard {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .inputGroup input,
+  .inputGroup select,
+  .inputGroup textarea {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+
+  .submitBtn {
+    padding: 16px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .securityText {
+    font-size: 0.7rem;
   }
 }
