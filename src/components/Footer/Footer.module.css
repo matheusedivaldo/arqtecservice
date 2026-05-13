@@ -162,8 +162,9 @@ a.contactItem:hover {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+
   .bottomContent {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
   }
 }

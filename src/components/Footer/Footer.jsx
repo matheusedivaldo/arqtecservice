@@ -62,11 +62,12 @@ const Footer = () => {
 
                 <div className={styles.bottom}>
                     <div className={styles.bottomContent}>
-                        <div className={styles.copyright}>
-                            © {currentYear} <strong>Arqtecservice</strong>. Todos os direitos reservados.
-                        </div>
                         <div className={styles.developer}>
                             Desenvolvido por <a href="https://matheusedivaldo.com.br/" target="_blank" rel="noreferrer">Matheus Edivaldo</a>
+                        </div>
+
+                        <div className={styles.copyright}>
+                            © {currentYear} <strong>Arqtecservice</strong>. Todos os direitos reservados.
                         </div>
                     </div>
                 </div>
