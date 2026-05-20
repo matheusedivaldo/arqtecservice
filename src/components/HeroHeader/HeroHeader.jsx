@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './HeroHeader.module.css';
 import logo from '../../assets/logos/logo-arqtecservice-monob.svg';
 import bannerDesktop from '../../assets/banners/banner-desktop.jpg';
@@ -52,10 +53,10 @@ const HeroHeader = () => {
                         <img src={logo} alt="Arqtecservice" className={styles.logo} />
 
                         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.navActive : ''}`}>
-                            <li><a href="#home" onClick={closeMenu}>Home</a></li>
-                            <li><a href="#sobre" onClick={closeMenu}>Sobre</a></li>
-                            <li><a href="#servicos" onClick={closeMenu}>Serviços</a></li>
-                            <li><a href="#contato" onClick={closeMenu}>Contato</a></li>
+                            <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+                            <li><Link to="/sobre" onClick={closeMenu}>Sobre</Link></li>
+                            <li><Link to="/servicos" onClick={closeMenu}>Serviços</Link></li>
+                            <li><Link to="/contato" onClick={closeMenu}>Contato</Link></li>
                             <li className={styles.mobileOnly}>
                                 <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>Solicitar Orçamento</a>
                             </li>
@@ -91,7 +92,7 @@ const HeroHeader = () => {
 
                     <div className={styles.ctaArea}>
                         <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>Solicitar Orçamento</a>
-                        <a href="#servicos" className={styles.btnSecondary}>Nossos Serviços</a>
+                        <Link to="/servicos" className={styles.btnSecondary}>Nossos Serviços</Link>
                     </div>
                 </div>
             </div>
