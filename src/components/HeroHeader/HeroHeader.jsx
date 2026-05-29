@@ -19,8 +19,10 @@ const HeroHeader = () => {
     }, []);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-        document.body.style.overflow = !isMenuOpen ? 'hidden' : 'auto';
+        setIsMenuOpen(prev => {
+            document.body.style.overflow = !prev ? 'hidden' : 'auto';
+            return !prev;
+        });
     };
 
     const closeMenu = () => {
@@ -42,10 +44,21 @@ const HeroHeader = () => {
                             </a>
                         </div>
                         <div className={styles.socialIcons}>
-                            <a href="https://www.instagram.com/arqtecservice_/" target="_blank" rel="noreferrer" className={styles.topLink}><FaInstagram size={16} /></a>
-                            <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.topLink}><FaWhatsapp size={16} /></a>
+                            <a href="https://www.instagram.com/arqtecservice_/" target="_blank" rel="noreferrer" className={styles.topLink}>
+                                <FaInstagram size={14} />
+                            </a>
+                            <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.topLink}>
+                                <FaWhatsapp size={14} />
+                            </a>
                         </div>
                     </div>
+                </div>
+
+                <div className={styles.navDivider}>
+                    <svg viewBox="0 0 1440 12" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="0,0 340,0 380,12 420,0 1440,0" fill="none" stroke="rgba(235,114,45,0.35)" strokeWidth="1" />
+                        <polyline points="380,12 400,4 420,12" fill="none" stroke="rgba(235,114,45,0.8)" strokeWidth="1.5" />
+                    </svg>
                 </div>
 
                 <nav className={styles.mainNav}>
@@ -58,11 +71,13 @@ const HeroHeader = () => {
                             <li><Link to="/servicos" onClick={closeMenu}>Serviços</Link></li>
                             <li><Link to="/contato" onClick={closeMenu}>Contato</Link></li>
                             <li className={styles.mobileOnly}>
-                                <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>Solicitar Orçamento</a>
+                                <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>
+                                    Solicitar Orçamento
+                                </a>
                             </li>
                         </ul>
 
-                        <button className={styles.hamburger} onClick={toggleMenu}>
+                        <button className={styles.hamburger} onClick={toggleMenu} aria-label="Menu">
                             {isMenuOpen ? <FaTimes /> : <FaBars />}
                         </button>
                     </div>
@@ -73,17 +88,20 @@ const HeroHeader = () => {
                 <div className={styles.imageLayer}>
                     <img src={bannerDesktop} className={`${styles.bgImage} ${styles.desktopBanner}`} alt="Instalações" />
                     <img src={bannerMobile} className={`${styles.bgImage} ${styles.mobileBanner}`} alt="Instalações" />
-                    <div className={styles.overlay}></div>
+                    <div className={styles.overlay} />
+                    <div className={styles.scanlines} />
                 </div>
 
                 <div className={styles.content}>
-                    <div className={styles.animGroup1}>
-                        <span className={styles.badge}>Engenharia & Alta Performance</span>
+                    <div className={styles.badgeWrap}>
+                        <span className={styles.badgeLine} />
+                        <span className={styles.badge}>Engenharia &amp; Alta Performance</span>
+                        <span className={styles.badgeLine} />
                     </div>
 
                     <h1 className={styles.title}>
                         <span className={styles.titleTop}>Instalações</span>
-                        <span className={styles.titleMain}>Elétrica & Automação</span>
+                        <span className={styles.titleMain}>Elétrica &amp; Automação</span>
                     </h1>
 
                     <p className={styles.subtitle}>
@@ -91,9 +109,29 @@ const HeroHeader = () => {
                     </p>
 
                     <div className={styles.ctaArea}>
-                        <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>Solicitar Orçamento</a>
+                        <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>
+                            Solicitar Orçamento
+                        </a>
                         <Link to="/servicos" className={styles.btnSecondary}>Nossos Serviços</Link>
                     </div>
+                </div>
+
+                <div className={styles.heroFooter}>
+                    <svg className={styles.lightningDivider} viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <polyline
+                            points="0,60 600,60 680,10 720,60 760,10 840,60 1440,60"
+                            fill="none"
+                            stroke="rgba(235,114,45,0.5)"
+                            strokeWidth="1"
+                        />
+                        <polyline
+                            points="700,35 720,8 740,35"
+                            fill="none"
+                            stroke="rgba(235,114,45,1)"
+                            strokeWidth="2"
+                        />
+                        <circle cx="720" cy="8" r="2.5" fill="var(--color-primary)" />
+                    </svg>
                 </div>
             </div>
         </section>
