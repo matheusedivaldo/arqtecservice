@@ -57,7 +57,6 @@ const HeroHeader = () => {
                 <div className={styles.navDivider}>
                     <svg viewBox="0 0 1440 12" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                         <polyline points="0,0 340,0 380,12 420,0 1440,0" fill="none" stroke="rgba(235,114,45,0.35)" strokeWidth="1" />
-                        <polyline points="380,12 400,4 420,12" fill="none" stroke="rgba(235,114,45,0.8)" strokeWidth="1.5" />
                     </svg>
                 </div>
 
