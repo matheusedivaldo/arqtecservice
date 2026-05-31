@@ -12,6 +12,14 @@ const HeroHeader = () => {
 
     const whatsappUrl = "https://wa.me/5511981200957?text=Olá, vim através do site e gostaria de um orçamento.";
 
+    const handleConversion = () => {
+        if (window.gtag) {
+            window.gtag('event', 'conversion', {
+                send_to: 'AW-17993154847/ym-ECIHAkbYcEJ-C54ND'
+            });
+        }
+    };
+
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
@@ -70,7 +78,13 @@ const HeroHeader = () => {
                             <li><Link to="/servicos" onClick={closeMenu}>Serviços</Link></li>
                             <li><Link to="/contato" onClick={closeMenu}>Contato</Link></li>
                             <li className={styles.mobileOnly}>
-                                <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>
+                                <a
+                                    href={whatsappUrl}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={styles.btnPrimaryPulse}
+                                    onClick={handleConversion}
+                                >
                                     Solicitar Orçamento
                                 </a>
                             </li>
@@ -108,7 +122,13 @@ const HeroHeader = () => {
                     </p>
 
                     <div className={styles.ctaArea}>
-                        <a href={whatsappUrl} target="_blank" rel="noreferrer" className={styles.btnPrimaryPulse}>
+                        <a
+                            href={whatsappUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={styles.btnPrimaryPulse}
+                            onClick={handleConversion}
+                        >
                             Solicitar Orçamento
                         </a>
                         <Link to="/servicos" className={styles.btnSecondary}>Nossos Serviços</Link>
