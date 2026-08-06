@@ -99,8 +99,8 @@ const HeroHeader = () => {
 
             <div className={styles.hero}>
                 <div className={styles.imageLayer}>
-                    <img src={bannerDesktop} className={`${styles.bgImage} ${styles.desktopBanner}`} alt="Instalações" />
-                    <img src={bannerMobile} className={`${styles.bgImage} ${styles.mobileBanner}`} alt="Instalações" />
+                    <img src={bannerDesktop} className={`${styles.bgImage} ${styles.desktopBanner}`} alt="Instalações elétricas e automação Arqtecservice" fetchPriority="high" />
+                    <img src={bannerMobile} className={`${styles.bgImage} ${styles.mobileBanner}`} alt="Instalações elétricas e automação Arqtecservice" fetchPriority="high" />
                     <div className={styles.overlay} />
                     <div className={styles.scanlines} />
                 </div>

@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Força HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://arqtecservice.com.br/$1 [R=301,L]
+
+  # Redireciona www para o domínio canônico (sem www)
+  RewriteCond %{HTTP_HOST} ^www\.arqtecservice\.com\.br$ [NC]
+  RewriteRule ^(.*)$ https://arqtecservice.com.br/$1 [R=301,L]
+
+  RewriteRule ^index\.html$ - [L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  RewriteRule . /index.html [L]
+</IfModule>

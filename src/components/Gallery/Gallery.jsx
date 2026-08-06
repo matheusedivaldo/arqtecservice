@@ -45,6 +45,7 @@ const Gallery = () => {
                                         src={getImageUrl(item.image)}
                                         alt={item.title}
                                         className={styles.image}
+                                        loading="lazy"
                                     />
                                     <div className={styles.cardOverlay}>
                                         <div className={styles.cardContent}>

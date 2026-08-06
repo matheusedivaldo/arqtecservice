@@ -71,6 +71,7 @@ const Partners = () => {
                                         src={getImageUrl(partner.image)}
                                         alt={partner.name}
                                         className={styles.logo}
+                                        loading="lazy"
                                     />
                                 </div>
                             </SwiperSlide>

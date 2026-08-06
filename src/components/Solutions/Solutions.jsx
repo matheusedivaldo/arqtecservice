@@ -60,6 +60,7 @@ const Solutions = () => {
                                     src={getImageUrl(service.image)}
                                     alt={service.title}
                                     className={styles.image}
+                                    loading="lazy"
                                 />
                                 <div className={styles.imageOverlay} />
                             </div>

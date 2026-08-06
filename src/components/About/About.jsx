@@ -62,7 +62,7 @@ const About = () => {
                     <div className={styles.visualSide}>
                         <div className={styles.imageFrame}>
                             <div className={styles.blueprintOverlay} />
-                            <img src={aboutImg} alt="Engenharia Arqtecservice" className={styles.image} />
+                            <img src={aboutImg} alt="Engenharia Arqtecservice" className={styles.image} loading="lazy" />
                             <div className={styles.experienceCard}>
                                 <span className={styles.expYears}>Expertise</span>
                                 <span className={styles.expText}>Industrial & Civil</span>
