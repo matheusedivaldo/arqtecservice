@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './HeroHeader.module.css';
 import logo from '../../assets/logos/logo-arqtecservice-monob.svg';
 import { FaInstagram, FaWhatsapp, FaEnvelope, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
@@ -7,6 +7,8 @@ import { FaInstagram, FaWhatsapp, FaEnvelope, FaPhoneAlt, FaBars, FaTimes } from
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { pathname } = useLocation();
+    const isHome = pathname === '/';
 
     const whatsappUrl = "https://wa.me/5511981200957?text=Olá, vim através do site e gostaria de um orçamento.";
 
@@ -65,7 +67,7 @@ const Navbar = () => {
                 </svg>
             </div>
 
-            <nav className={styles.mainNav}>
+            <nav className={`${styles.mainNav} ${!isHome ? styles.solidNav : ''}`}>
                 <div className={styles.container}>
                     <Link to="/" onClick={closeMenu}>
                         <img src={logo} alt="Arqtecservice" className={styles.logo} />
