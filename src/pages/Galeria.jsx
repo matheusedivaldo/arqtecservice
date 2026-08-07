@@ -1,7 +1,7 @@
 import React from 'react';
-import PageBanner from '../components/PageBanner/PageBanner';
 import Gallery from '../components/Gallery/Gallery';
 import usePageMeta from '../hooks/usePageMeta';
+import styles from './pageSpacer.module.css';
 
 const Galeria = () => {
     usePageMeta({
@@ -12,14 +12,9 @@ const Galeria = () => {
     });
 
     return (
-        <>
-            <PageBanner
-                eyebrow="Projetos Realizados"
-                title="Nosso Portfólio"
-                subtitle="Projetos reais executados em indústrias, comércios e obras civis na Grande São Paulo."
-            />
+        <div className={styles.spacer}>
             <Gallery />
-        </>
+        </div>
     );
 };
 

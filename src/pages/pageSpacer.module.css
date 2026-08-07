@@ -1,0 +1,9 @@
+.spacer {
+  padding-top: 40px;
+}
+
+@media (min-width: 901px) {
+  .spacer {
+    padding-top: 90px;
+  }
+}

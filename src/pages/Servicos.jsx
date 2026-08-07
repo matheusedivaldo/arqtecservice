@@ -1,7 +1,7 @@
 import React from 'react';
-import PageBanner from '../components/PageBanner/PageBanner';
 import Solutions from '../components/Solutions/Solutions';
 import usePageMeta from '../hooks/usePageMeta';
+import styles from './pageSpacer.module.css';
 
 const Servicos = () => {
     usePageMeta({
@@ -12,14 +12,9 @@ const Servicos = () => {
     });
 
     return (
-        <>
-            <PageBanner
-                eyebrow="O Que Fazemos"
-                title="Nossos Serviços"
-                subtitle="Soluções completas em engenharia elétrica, automação e infraestrutura para indústria e construção civil."
-            />
+        <div className={styles.spacer}>
             <Solutions />
-        </>
+        </div>
     );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import PageBanner from '../components/PageBanner/PageBanner';
 import Contact from '../components/Contact/Contact';
 import usePageMeta from '../hooks/usePageMeta';
+import styles from './pageSpacer.module.css';
 
 const Contato = () => {
     usePageMeta({
@@ -12,14 +12,9 @@ const Contato = () => {
     });
 
     return (
-        <>
-            <PageBanner
-                eyebrow="Fale Conosco"
-                title="Vamos Conversar?"
-                subtitle="Preencha o formulário abaixo ou fale direto pelo WhatsApp — retornamos rapidamente."
-            />
+        <div className={styles.spacer}>
             <Contact />
-        </>
+        </div>
     );
 };
 

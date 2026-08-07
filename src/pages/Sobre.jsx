@@ -1,7 +1,7 @@
 import React from 'react';
-import PageBanner from '../components/PageBanner/PageBanner';
 import About from '../components/About/About';
 import usePageMeta from '../hooks/usePageMeta';
+import styles from './pageSpacer.module.css';
 
 const Sobre = () => {
     usePageMeta({
@@ -12,14 +12,9 @@ const Sobre = () => {
     });
 
     return (
-        <>
-            <PageBanner
-                eyebrow="Quem Somos"
-                title="Sobre a Arqtecservice"
-                subtitle="Engenharia que une rigidez técnica industrial à dinâmica da construção civil."
-            />
+        <div className={styles.spacer}>
             <About />
-        </>
+        </div>
     );
 };
 
