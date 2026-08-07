@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import logo from '../../assets/logos/logo-arqtecservice-monob.svg';
 import { FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa';
@@ -27,11 +28,11 @@ const Footer = () => {
                     <div className={styles.linkColumn}>
                         <h3>Navegação</h3>
                         <ul>
-                            <li><a href="#home"><FaChevronRight /> Home</a></li>
-                            <li><a href="#sobre"><FaChevronRight /> Sobre Nós</a></li>
-                            <li><a href="#servicos"><FaChevronRight /> Soluções</a></li>
-                            <li><a href="#galeria"><FaChevronRight /> Portfólio</a></li>
-                            <li><a href="#contato"><FaChevronRight /> Contato</a></li>
+                            <li><Link to="/"><FaChevronRight /> Home</Link></li>
+                            <li><Link to="/sobre"><FaChevronRight /> Sobre Nós</Link></li>
+                            <li><Link to="/servicos"><FaChevronRight /> Soluções</Link></li>
+                            <li><Link to="/galeria"><FaChevronRight /> Portfólio</Link></li>
+                            <li><Link to="/contato"><FaChevronRight /> Contato</Link></li>
                         </ul>
                     </div>
 
